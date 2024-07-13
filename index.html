@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="./images/2048px-Back_Arrow.svg.png" id="backBtn">
+    </div>
+    <div class="imaggg">
+        <div>
+            <span><img src="./images/11062b_47ba31f4006d49c786dca2f097df7dd9~mv2_d_3648_3648_s_4_2.jpg" alt=""></span>
+            <span><img src="./images/11062b_70aa92e8a4b449c59a7410704ce8343b~mv2_d_1922_1912_s_2.jpg" alt=""></span>
+            <span><img src="./images/11062b_f080b21fa43c41339b183f7a1b020222~mv2_d_4951_4951_s_4_2.jpg" alt=""></span>
+            <span><img src="./images/first.jpg" alt=""></span>
+
+        </div>
+        <div>
+            <span><img src="./images/fourth.jpg" alt=""></span>
+            <span><img src="./images/second.jpg" alt=""></span>
+            <span><img src="./images/third.jpg" alt=""></span>
+            <span><img src="./images/first.jpg" alt=""></span>
+
+        </div>
+    </div>
+    <img src="./images/Next_Arrow.svg.png" id="nextBtn">
+</div>
+<script>
+    let scrollcontainer = document.querySelector(".imaggg")
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+
+    scrollcontainer.addEventListener("wheel",(evt) => {
+        evt.preventDefault();
+        scrollcontainer.scrollLeft += evt.deltaY;
+    });
+    nextBtn.addEventListener("click", () =>{
+        scrollcontainer.style.scrollbehavior = "smooth;"
+        scrollcontainer.scrollLeft += 300;
+    })
+    backBtn.addEventListener("click", () =>{
+         scrollcontainer.style.scrollbehavior = "smooth;"
+        scrollcontainer.scrollLeft -= 300;
+    });
+</script>
+    
+</body>
+</html>

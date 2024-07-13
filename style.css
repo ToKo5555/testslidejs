@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.imaggg{
+    width: 1300px;
+    display: flex;
+    overflow-x: scroll;
+}
+.imaggg div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.imaggg div img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+}
+.imaggg::-webkit-scrollbar{
+ display: none;
+}
+#nextBtn, #backBtn{
+    width: 30px;
+    cursor:pointer;
+}
+#nextBtn{
+    position:absolute;
+    right: 16%;
+    top: 18%;
+    z-index: 1;
+}
+#backBtn{
+    position: absolute;
+    left: 1%;
+    top:18% ;
+    z-index: 1;
+}
